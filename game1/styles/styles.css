@@ -1,0 +1,40 @@
+body{
+    margin: 0 0;
+    background-color: darkseagreen;
+}
+.header{
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
+}
+#heading{
+    margin: 0 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#distance{
+    background-color: darkmagenta;
+    margin: 7px 10%;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-Box{
+    width: 70%;
+    background-color: deepskyblue;
+}
+
+#left-Clicks{
+    background-color: darkmagenta;
+    margin: 7px 10%;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#map{
+    margin: 30px 19%;
+    width: 870px;
+    height: 670px;
+    position: fixed;
+}
