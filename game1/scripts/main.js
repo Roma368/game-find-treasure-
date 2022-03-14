@@ -1,8 +1,26 @@
 alert('to start the game - click on image which on the center')
-let askComplexity = function(){
-    prompt('chose complexity where 1-baby; 2-common; 3-HELL')
+
+let clicks = 0
+let maxClicks = 0
+let complexity = null
+
+function getComplexity () {
+    complexity = prompt('chose complexity where 1-baby; 2-common; 3-HELL');
 }
-askComplexity()
+
+getComplexity()
+
+if(complexity == 1){
+    maxClicks = 100
+}else if (complexity == 2){
+    maxClicks = 20
+}else if (complexity == 3){
+    maxClicks = 10
+} else {
+    maxClicks = 1
+alert('You clown, because you must chose from 1 to 3, so you have 1 try to click on img, if you win, i will give 500 grivnas')
+}
+
 
 let getRandomNumber = function (size) {
     return Math.floor(Math.random() * size)
@@ -16,22 +34,9 @@ let target = {
     y: getRandomNumber(height)
 }
 
-let clicks = 0
-let maxClicks = 0
-
-if(askComplexity = 1){
-    maxClicks = 100
-} else if (askComplexity = 2){
-    maxClicks = 20
-} else if (askComplexity = 3){
-    maxClicks = 10
-} else {
-    maxClicks = 1
-    alert('You clown, because you must chose from 1 to 3, so you have 1 try to click on img, if you win, i will give 500 grivnas')
-}
-
 $('#map').click(function (event) {
     clicks++
+    debugger;
     let distance = getDistance(event, target)
     let distanceHint = getDistanceHint(distance)
     $('#distance').text(distanceHint)
