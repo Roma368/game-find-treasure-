@@ -10,15 +10,15 @@ function getComplexity () {
 
 getComplexity()
 
-if(complexity == 1){
+if(complexity === 1){
     maxClicks = 100
-}else if (complexity == 2){
+}else if (complexity === 2){
     maxClicks = 20
-}else if (complexity == 3){
+}else if (complexity === 3){
     maxClicks = 10
 } else {
     maxClicks = 1
-alert('You clown, because you must chose from 1 to 3, so you have 1 try to click on img, if you win, i will give 500 grivnas')
+    alert('You clown, because you must chose from 1 to 3, so you have 1 try to click on img, if you win, i will give 500 grivnas')
 }
 
 
@@ -42,10 +42,11 @@ $('#map').click(function (event) {
     $('#distance').text(distanceHint)
     if(clicks > maxClicks){
         alert('You lose :|')
-        return clicks = 0
+        return clicks = 0, getComplexity()
     }
     if (distance < 20) {
         alert("Treasure've found! Done clicks: " + (clicks - 1) + ". If you want start again update the page");
+        return clicks = 0, getComplexity(), getRandomNumber()
     }
 })
 
